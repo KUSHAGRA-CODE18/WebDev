@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteXL Navbar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1c1c1c;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 10px;
+}
+
+/* Main Navbar */
+.navbar {
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Top Navigation */
+.top-nav {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+    border-bottom: 1px solid #e8e8e8;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    color: #299653;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Main Links */
+.main-links {
+    display: flex;
+    gap: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-links a,
+.bottom-nav a {
+    text-decoration: none;
+    color: #252a30;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.main-links a:hover,
+.bottom-nav a:hover {
+    color: #299653;
+}
+
+/* Sign In Button */
+.sign-in {
+    background-color: #202b34;
+    color: #ffffff;
+    border: none;
+    padding: 7px 16px;
+    border-radius: 5px;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.sign-in:hover {
+    background-color: #299653;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 23px;
+    padding: 8px 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .top-nav {
+        padding: 0 15px;
+    }
+
+    .main-links {
+        position: static;
+        transform: none;
+        margin-left: auto;
+        margin-right: 15px;
+        gap: 12px;
+    }
+
+    .main-links a {
+        font-size: 10px;
+    }
+
+    .bottom-nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-links a:nth-child(2),
+    .main-links a:nth-child(3),
+    .main-links a:nth-child(4) {
+        display: none;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .bottom-nav {
+        gap: 18px;
+    }
+}
+
+</style>
+
+<body>
+
+    <header class="navbar">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <div class="logo">ByteXL</div>
+
+            <nav class="main-links">
+                <a href="#">Courses</a>
+                <a href="#">Tutorials</a>
+                <a href="#">Practice</a>
+                <a href="#">Jobs</a>
+            </nav>
+
+            <button class="sign-in">Sign In</button>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#">DSA</a>
+            <a href="#">Practice Problems</a>
+            <a href="#">C</a>
+            <a href="#">C++</a>
+            <a href="#">Java</a>
+            <a href="#">Python</a>
+            <a href="#">JavaScript</a>
+            <a href="#">Data Science</a>
+            <a href="#">Machine Learning</a>
+            <a href="#">Courses</a>
+            <a href="#">Linux</a>
+            <a href="#">DevOps</a>
+        </nav>
+    </header>
+
+</body>
+</html>
